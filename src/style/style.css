@@ -1,0 +1,236 @@
+:root {
+	--clr-body: #1a1b21;
+	--clr-footer: #161619;
+	--clr-background: #23252c;
+}
+
+/* ------------------  */
+/* Reset               */
+/* ------------------- */
+
+/* Box sizing */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Reset margins */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+	margin: 0;
+	padding: 0;
+}
+
+/* set up the body */
+
+body {
+	line-height: 1.5;
+	min-height: 100vh;
+	font-family: 'Inter', sans-serif;
+	display: grid;
+	width: 100%;
+	min-height: 100vh;
+	place-items: center;
+	background-color: var(--clr-background);
+}
+
+a {
+	text-decoration: none;
+}
+
+/* make images easier to work with */
+
+img,
+picture {
+	max-width: 100%;
+	display: block;
+}
+
+/* make forms easier to work with */
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* making thickness universal */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	font-weight: 500;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+/* remove animations for people who have turned them off */
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+.main {
+	max-width: 320px;
+	border-radius: 10px 10px 15px 15px;
+	box-shadow: rgba(244, 244, 244, 0.15) 0px 2px 16px;
+	height: fit-content;
+	background-color: var(--clr-body) !important;
+	color: #cccccc;
+	margin-block: 2rem;
+}
+
+.picture-container {
+	width: 100%;
+}
+
+.picture-container > img {
+	width: 100%;
+	height: auto;
+}
+
+.profile-data {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 1.5rem;
+	text-align: center;
+}
+
+.personal-information {
+	margin-bottom: 0.5rem;
+	line-height: 32px;
+}
+.personal-information h1 {
+	font-weight: bold;
+}
+.personal-information p {
+	color: #f3bf99;
+}
+
+.website {
+	font-size: 12px;
+	font-weight: 300;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	border-radius: 5px;
+	font-weight: bold;
+	font-size: 1rem;
+	text-align: center;
+    color: #374151;
+	cursor: pointer;
+	border: 1px solid transparent;
+    padding: 0.4rem 1rem;
+    transition: all 300ms ease-in-out;
+    letter-spacing: 1px;
+}
+.button:hover{
+    transform: scale(0.97);
+    letter-spacing: 0.8px;
+}
+
+.primary-button {
+	background-color: #5093E2;
+    color: white;
+}
+
+.icon-button{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-right: 0.5rem;
+}
+
+.email{
+    background-image: url('../assets/mail.png');
+}
+.linkedin{
+    background-image: url('../assets/linkedin.png');
+}
+
+.button-container {
+	margin-top: 2rem;
+	display: flex;
+	gap: 1rem;
+}
+
+.section-container {
+	padding: 1rem 2rem;
+	margin-top: -10px;
+}
+
+.section-container:last-child {
+	margin-bottom: 1rem;
+}
+
+.footer{
+    width: 100%;
+    height: 70px;
+    background-color: var(--clr-footer);
+    border-radius: 0px 0px 15px 15px;
+    display: grid;
+    grid-template-areas: '. twitter facebook instagram github .';
+    grid-template-columns: 1rem 25px 25px 25px 25px  1rem;
+    gap: 24px;
+    place-content: center;
+}
+
+.icon{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-right: 0.5rem;
+}
+
+.twitter{
+    grid-area: twitter;
+    background-image: url('../assets/Twitter.png');
+}
+.facebook{
+    grid-area: facebook;
+    background-image: url('../assets/Facebook.png');
+}
+.instagram{
+    grid-area: instagram;
+    background-image: url('../assets/Instagram.png');
+}
+.github{
+    grid-area: github;
+    background-image: url('../assets/Github.png');
+}
